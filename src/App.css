@@ -59,7 +59,7 @@ ol{
 .navBar{
   display: flex;
   align-items: center;
-  width: 72%;
+  width: 80%;
 }
 .logo{
   display: flex;
