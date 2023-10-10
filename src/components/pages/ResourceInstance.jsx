@@ -36,18 +36,47 @@ const ResourceInstance = () => {
         });
       }
     }, [data, resourcesById])
-  
+    const myMap = [{"key" : "classification"},
+    {key : "language"},
+    {key : "average_hight"},
+    {key : "director"},
+    {key : "producer"},
+    {key : "release_date"},
+    {key : "height"},
+    {key : "mass"},
+    {key : "gender"},
+    {key : "diameter"},
+    {key : "climate"},
+    {key : "population"},
+    {key : "gravity"},
+    {key : "model"},
+    {key : "consumables"},
+    {key : "length"}]
+    const filteredKeys = myMap.filter(({ key }) => data[key] !== undefined)
+    console.log("...................",filteredKeys)
     return (
-      <div>
+      <div className='intdiv'>
         {isFetching ? <h3>Fetching !!!!</h3> : null}
         {errMsg ? <h3>{errMsg}</h3> : null}
         {data ? (<div>
+          
           <div className='twelve'>
             <h1>
+            <div className='black'>
               {data['name'] || data['title']}
+            </div>
             </h1>
           </div>
-          <div style={{color : "white"}}>
+          <div>
+            {filteredKeys.map(({key}) => {
+              return(
+                <ol>
+                  <b>{key.toUpperCase()}</b> - {data[key]}
+                </ol>
+              )
+            })}
+          </div>
+          <div>
             {<OtherDataList resource={data} />}
           </div>
         </div>) : null}

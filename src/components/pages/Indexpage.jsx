@@ -10,21 +10,14 @@ const Indexpage = () => {
   return (
             <div>
     <Swiper
-      slidesPerView={3}
-      spaceBetween={30}
-      autoplay={{
-        delay: 1500,
-        disableOnInteraction: false,
-      }}
-      centeredSlides={true}
-      freeMode={true}
-      pagination={{
-        clickable: true,
-      }}
-      navigation={true}
-      modules={[Autoplay,FreeMode, Pagination,Navigation]}
-      className="mySwiper"
-    >
+        slidesPerView={3}
+        spaceBetween={30}
+        pagination={{
+          clickable: true,
+        }}
+        modules={[Pagination]}
+        className="mySwiper"
+      >
       <SwiperSlide><div className='sliderImg'><img src='https://images.moviesanywhere.com/9903bad44ad5cea782c6ce82a1920467/b5215ed8-cc16-4b1b-a143-bd9e4a4bbb9e.jpg'/></div></SwiperSlide>
       <SwiperSlide><div className='sliderImg'><img src='https://flxt.tmsimg.com/assets/p8884_p_v8_ae.jpg' /></div></SwiperSlide>
       <SwiperSlide><div className='sliderImg'><img src='https://flxt.tmsimg.com/assets/p8890_p_v8_be.jpg' /></div></SwiperSlide>

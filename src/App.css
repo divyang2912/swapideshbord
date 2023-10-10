@@ -173,7 +173,9 @@ h1 em {
   background: #fff;
   transition: 0.2s;
 }
-
+.black{
+  color: #000000;
+}
 .plus-button:hover {
   background-color: #000000;
   transition: 0.2s;
@@ -253,8 +255,8 @@ td{
   object-fit: fill;
 }
 .sliderImg{
-  width: 95%;
-  height: 850px;
+  width: 100%;
+  height: 650px;
 }
 /*Huge thanks to @tobiasahlin at http://tobiasahlin.com/spinkit/ */
 .spinner {
@@ -332,4 +334,7 @@ nav {
   .intDiv{
     color: #3f9efd;
     margin-left: 35px;
+  }
+  .intdiv{
+    background-color: #fff;
   }
